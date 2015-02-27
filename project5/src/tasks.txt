@@ -1,6 +1,6 @@
-CS162;Finish Project 5;03/09/2015
-CS162;Finish Lab6;03/02/2015
+CG100;Finish reading;02/02/2015
 CS162;Finish Lab7;03/09/2015
-CS250;Finish Induction Mod;03/09/2015
-MTH112;Finish 9.1;03/06/2015
-MTH112;Finish 9.1;03/06/2015
+CS162;Finish Lab6;03/02/2015
+CS162;Finish project6;03/09/2015
+CS250;Finish Induction Module;03/09/2015
+MTH112;Review for exam;03/02/2015

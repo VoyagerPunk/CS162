@@ -6,9 +6,9 @@
  *    Description:Implementation file for tasklist class  
  *
  *        Version:  1.0
- *        Created:  02/20/2015 02:18:39 AM
+ *        Created:  02/26/2015 02:18:39 AM
  *       Revision:  none
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Jonathon Sonesen
  *   Organization:  PCC CS162
@@ -19,7 +19,7 @@
 #include <fstream>
 #include <iomanip>
 #include <cstring>
-#include "../include/TaskList.h"
+#include "TaskList.h"
 using namespace std;
 
 //Default constructor initializer make an empty list
@@ -197,7 +197,7 @@ void TaskList::saveDB(const char fileName[]) const
     out.close();
 }
 
-//Adds an entry to the task list 
+//Inserts an entry to the task list 
 void TaskList::addTask(const Task &aTask)
 {
     bool found;
@@ -206,27 +206,38 @@ void TaskList::addTask(const Task &aTask)
     Node * newNode;
     char currentDes[MAX_CHAR];
     char checkDes[MAX_CHAR];
+    char currentCourse[MAX_CHAR];
+    char checkCourse[MAX_CHAR];
     newNode = new Node(aTask);
     newNode->next = NULL;
 
-    //Case 1
+    //List is empty, add to first
     if (head == NULL)
     {
         head = newNode;
         tail = newNode;
         size++;
     }
-    else
+    else        //list is not empty
     {
         current = head;
         found = false;
         
         while (current != NULL && !found)
         {
+            //get strings for comparison
             newNode->info.getDes(checkDes);
             current->info.getDes(currentDes);
-            if(strcmp(currentDes, checkDes) == 0)
-                found = true;
+            newNode->info.getCourse(checkCourse);
+            current->info.getCourse(currentCourse);
+            
+            //check if item is already in list
+            if(strcmp(currentDes, checkDes) == 0 && strcmp(currentCourse, checkCourse) == 0)
+            {
+                cout << "Oops! looks like you already added that task!\n";
+                return;
+
+            } 
             else
             {
                 trailCurrent = current;
@@ -234,8 +245,8 @@ void TaskList::addTask(const Task &aTask)
             }
         }
 
-        //Case 2
-        if(current == head)
+        //If the item is less, stop the search and insert
+        if(strcmp(checkCourse,currentCourse) < 0 ) 
         {
             newNode->next = head;
             head = newNode;

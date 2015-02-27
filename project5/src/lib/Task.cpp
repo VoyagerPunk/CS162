@@ -6,9 +6,9 @@
  *    Description:  Implementation file for Task class
  *
  *        Version:  1.0
- *        Created:  02/20/2015 02:16:52 AM
+ *        Created:  02/26/2015 02:16:52 AM
  *       Revision:  none
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Jonathon Sonesen
  *   Organization:  PCC CS162

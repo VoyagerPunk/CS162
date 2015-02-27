@@ -6,9 +6,9 @@
  *    Description: header file for standard user input
  *
  *        Version:  1.0
- *        Created:  02/20/2015 12:00:35 PM
+ *        Created:  02/26/2015 12:00:35 PM
  *       Revision:  none
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author: Jonathon Sonesen 
  *   Organization:  PCC CS162

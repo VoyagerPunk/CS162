@@ -6,11 +6,11 @@
  *    Description:  Implementation file for user input
  *
  *        Version:  1.0
- *        Created:  02/07/2015 01:27:08 AM
+ *        Created:  02/26/2015 01:27:08 AM
  *       Revision:  none
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
- *         Author:  Jonathon Sonesen
+ *         Author:  Jonatoon Sonesen
  *   Organization:  PCC CS162
  *
  * =====================================================================================

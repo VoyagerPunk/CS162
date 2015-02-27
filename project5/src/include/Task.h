@@ -6,9 +6,9 @@
  *    Description:  Header file for task class
  *
  *        Version:  1.0
- *        Created:  02/20/2015 01:45:27 AM
+ *        Created:  02/26/2015 01:45:27 AM
  *       Revision:  none
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Jonathon Sonesen
  *   Organization:  PCC CS162
