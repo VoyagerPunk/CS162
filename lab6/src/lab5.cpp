@@ -32,10 +32,13 @@ Student * createStudent(const char name[], float gpa);
 bool destroyStudent(Student * &aStudent);
 
 int main()
-{
+{   int size = 5;
     float gpa = 3.5;
     Student * aStudent = createStudent("jon",gpa);
-  //  cout << aStudent.name << " " << aStudent.gpa << '\n';
+    char ** names = {"jon", "bill", "anne", "sadie", "brian"};
+    createStudentList(names, size);
+    //  cout << aStudent.name << " " << aStudent.gpa << '\n';
+    
     destroyStudent(aStudent);
     return 0;
 }
@@ -65,7 +68,7 @@ bool destroyStudent(Student * &aStudent)
 
 Student ** createStudentList(char ** names, int size)
 {
-
+    
 }
 
 
