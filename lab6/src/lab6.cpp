@@ -1,6 +1,7 @@
 /*
- * =====================================================================================
  *
+ * ===================================================================================
+ * *
  *       Filename:  lab5.cpp
  *
  *    Description:  
@@ -33,31 +34,44 @@ bool destroyStudent(Student * &aStudent);
 
 int main()
 {   int size = 0;
-    float gpa = 3.5;
-    
-    Student * aStudent = createStudent("jon",gpa);
+    Student ** list;
+    //Student * aStudent = createStudent("jon",gpa);
     char ** names;
-    names[size] = new char*[size]; 
-    name[size] = new char[strlen("jon") + 1];
+    names = new char*[6]; 
+    
+    names[size] = new char[strlen("jon") + 1];
     strcpy(names[size], "jon");
     size++;
-    name[size] = new char[strlen("anne") + 1];
+    
+    names[size] = new char[strlen("anne") + 1];
     strcpy(names[size], "anne");
     size++;
-    name[size] = new char[strlen("beth") + 1];
+    
+    names[size] = new char[strlen("beth") + 1];
     strcpy(names[size], "beth");
     size++;
-    name[size] = new char[strlen("jolene") + 1];
+    
+    names[size] = new char[strlen("gabi") + 1];
     strcpy(names[size], "gabi");
     size++;
-    name[size] = new char[strlen("lee") + 1];
+    
+    names[size] = new char[strlen("lee") + 1];
     strcpy(names[size], "lee");
     size++;
-
-    Student ** List = createStudentList(names, size);
-    //  cout << aStudent.name << " " << aStudent.gpa << '\n';
     
-    destroyStudent(aStudent);
+    for (int i = 0; i < size; i++)
+    {
+        cout << names[i] << "\n";
+    }
+
+    list = createStudentList(names, size);
+    for (int i = 0; i < size; i++)
+    delete names[i];
+
+    delete names;
+    destroyStudentList(list, size);
+    
+    //destroyStudent(aStudent);
     return 0;
 }
 
@@ -86,11 +100,31 @@ bool destroyStudent(Student * &aStudent)
 
 Student ** createStudentList(char ** names, int size)
 {
-    Student aStudent = new Student;
-    for (int i = 0; i < size; i++;)
-    {
-        
+    Student ** list;
+    list = new Student*[size*2];
+
+    for (int i = 0; i < size; i++)
+    {  
+        list[i] = createStudent(names[i], 0);
     }
+    return list;
 }
 
-
+bool destroyStudentList(Student ** studentList, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        if(studentList[i] == NULL)
+        {
+            return false;
+        }
+        else
+        {
+            delete  [] studentList[i]->name;
+            studentList[i]->gpa = 0;
+            delete studentList[i];
+        }
+    }
+    delete  studentList;
+    return true;
+}

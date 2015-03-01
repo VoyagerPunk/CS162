@@ -1,2 +1,2 @@
-lab5: lab5.cpp
-	g++ lab5.cpp
+lab5: lab6.cpp
+	clang++ lab6.cpp
