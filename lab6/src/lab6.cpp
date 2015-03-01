@@ -1,18 +1,18 @@
 /*
  *
  * ===================================================================================
- * *
+ * 
  *       Filename:  lab5.cpp
  *
- *    Description:  
+ *    Description:  a set of algorithms for list manipulation
  *
  *        Version:  1.0
  *        Created:  02/20/2015 11:44:59 PM
  *       Revision:  none
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
- *         Author:  YOUR NAME (), 
- *   Organization:  
+ *         Author:  Jonathon Sonesen, 
+ *   Organization:  PPC CS162
  *
  * =====================================================================================
  */
