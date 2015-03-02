@@ -8,7 +8,7 @@
  *        Version:  1.0
  *        Created:  02/20/2015 12:38:54 AM
  *       Revision:  none
- *       Compiler:  gcc
+ *       Compiler:  g++
  *
  *         Author:  Jonathon Sonesen
  *   Organization:  PCC CS162
